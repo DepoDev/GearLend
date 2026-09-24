@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="GearLend.API/GearLend.API.csproj" />
+  <Project Path="GearLend.Application/GearLend.Application.csproj" />
+  <Project Path="GearLend.Domain/GearLend.Domain.csproj" />
+  <Project Path="GearLend.Infrastructure/GearLend.Infrastructure.csproj" />
+</Solution>
