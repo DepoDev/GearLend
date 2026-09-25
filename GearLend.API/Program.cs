@@ -1,3 +1,5 @@
+using GearLend.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore ;
 
 namespace GearLend.API
 {
@@ -10,6 +12,15 @@ namespace GearLend.API
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            var connectionString =
+            builder.Configuration.GetConnectionString("DefaultConnection")
+                ?? throw new InvalidOperationException("Connection string"
+                + "'DefaultConnection' not found.");
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(connectionString));
+
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
