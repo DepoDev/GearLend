@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.18" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.18" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.12">
@@ -22,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GearLend.Domain\GearLend.Domain.csproj" />
+    <ProjectReference Include="..\GearLend.Application\GearLend.Application.csproj" />
   </ItemGroup>
 
 </Project>
